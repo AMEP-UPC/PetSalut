@@ -16,7 +16,6 @@ PasarellaUsuari::PasarellaUsuari() {
 
 }
 
-
 void PasarellaUsuari::insereix()
 {
 

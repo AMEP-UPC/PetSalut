@@ -22,8 +22,8 @@ public:
 	String^ descripcio;
 	String^ telefon;
 
+	PasarellaUsuari();
 	void insereix();
 	void esborra();
-
 
 };
