@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "RegUsu.h"
+#include "RegU.h"
 
 namespace CppCLRWinFormsProject {
 
@@ -118,16 +118,16 @@ namespace CppCLRWinFormsProject {
 
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		PetSalut::RegUsu^ regUsu = gcnew PetSalut::RegUsu();
+		PetSalut::RegU^ regU = gcnew PetSalut::RegU();
 
-		regUsu->TopLevel = false;
-		regUsu->AutoScroll = true;
-		regUsu->Dock = DockStyle::Fill;
+		regU->TopLevel = false;
+		regU->AutoScroll = true;
+		regU->Dock = DockStyle::Fill;
 
 		this->Controls->Clear();
-		this->Controls->Add(regUsu);
+		this->Controls->Add(regU);
 
-		regUsu->Show(); 
+		regU->Show(); 
 
 	}
 };
