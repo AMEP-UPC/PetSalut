@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "RegUsu.h"
+#include "IniUsu.h"
 
 namespace CppCLRWinFormsProject {
 
@@ -41,6 +42,7 @@ namespace CppCLRWinFormsProject {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 
+
 	protected:
 
 	private:
@@ -66,9 +68,10 @@ namespace CppCLRWinFormsProject {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(405, 121);
+			this->label1->Location = System::Drawing::Point(540, 149);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(332, 69);
+			this->label1->Size = System::Drawing::Size(411, 85);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"PETSALUT";
 			// 
@@ -78,12 +81,14 @@ namespace CppCLRWinFormsProject {
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(431, 222);
+			this->button1->Location = System::Drawing::Point(575, 273);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(273, 107);
+			this->button1->Size = System::Drawing::Size(364, 132);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"INICIAR SESSIÓ";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
 			// button2
 			// 
@@ -91,9 +96,10 @@ namespace CppCLRWinFormsProject {
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(431, 359);
+			this->button2->Location = System::Drawing::Point(575, 442);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(273, 107);
+			this->button2->Size = System::Drawing::Size(364, 132);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"REGISTRAR-SE";
 			this->button2->UseVisualStyleBackColor = false;
@@ -101,13 +107,14 @@ namespace CppCLRWinFormsProject {
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(1184, 661);
+			this->ClientSize = System::Drawing::Size(1579, 814);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Form1";
 			this->Text = L"PETSALUT";
 			this->ResumeLayout(false);
@@ -130,5 +137,20 @@ namespace CppCLRWinFormsProject {
 		regUsu->Show(); 
 
 	}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+		PetSalut::IniUsu^ iniUsu = gcnew PetSalut::IniUsu();
+
+		//iniUsu->TopLevel = false;
+		//iniUsu->AutoScroll = true;
+		//iniUsu->Dock = DockStyle::Fill;
+
+		this->Visible = false;
+		//this->Controls->Clear();
+		//this->Controls->Add(iniUsu);
+
+		iniUsu->Show();
+
+}
 };
 }
