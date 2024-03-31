@@ -35,6 +35,12 @@
     <ClInclude Include="RegU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PasarellaUsuari.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IniUsu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -53,6 +59,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RegU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PasarellaUsuari.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IniUsu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

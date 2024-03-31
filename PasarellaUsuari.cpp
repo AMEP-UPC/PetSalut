@@ -1,24 +1,26 @@
+#include "pch.h"
 #include "PasarellaUsuari.h"
 
 using namespace std;
 using namespace System::IO;
 using namespace MySql::Data::MySqlClient;
 
-PasarellaUsuari::PasarellaUsuari() {
+PasarellaUsuari::PasarellaUsuari() 
+{
 
-    string nom = "";
-    string sobrenom = "";
-    string contrasenya = "";
-    string data_naixament = "";
-    string correu_electronic = "";
-    string descripcio = "";
-    string telefon = "";
+    String^ nom = "";
+    String^ sobrenom = "";
+    String^ contrasenya = "";
+    String^ data_naixament = "";
+    String^ correu_electronic = "";
+    String^ descripcio = "";
+    String^ telefon = "";
 
 }
 
 void PasarellaUsuari::insereix()
 {
-
+    
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
     String^ sql = "INSERT INTO propietaris VALUES (@username, @nom, @contrasenya, @correu, @telefon, @descripcio);";
@@ -33,6 +35,7 @@ void PasarellaUsuari::insereix()
     cmd->Parameters->AddWithValue("@descripcio", descripcio);
 
     MySqlDataReader^ dataReader;
+    
 
 }
 

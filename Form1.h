@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "RegU.h"
+#include "IniUsu.h"
 
 namespace CppCLRWinFormsProject {
 
@@ -84,6 +85,7 @@ namespace CppCLRWinFormsProject {
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"INICIAR SESSIÓ";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
 			// button2
 			// 
@@ -118,17 +120,33 @@ namespace CppCLRWinFormsProject {
 
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		PetSalut::RegU^ regU = gcnew PetSalut::RegU();
+		PetSalut::RegU^ RegUsu = gcnew PetSalut::RegU();
 
-		regU->TopLevel = false;
-		regU->AutoScroll = true;
-		regU->Dock = DockStyle::Fill;
+		//iniUsu->TopLevel = false;
+		//iniUsu->AutoScroll = true;
+		//iniUsu->Dock = DockStyle::Fill;
 
-		this->Controls->Clear();
-		this->Controls->Add(regU);
+		this->Visible = false;
+		//this->Controls->Clear();
+		//this->Controls->Add(iniUsu);
 
-		regU->Show(); 
+		RegUsu->Show();
 
 	}
-};
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+		PetSalut::IniUsu^ iniUsu = gcnew PetSalut::IniUsu();
+
+		//iniUsu->TopLevel = false;
+		//iniUsu->AutoScroll = true;
+		//iniUsu->Dock = DockStyle::Fill;
+
+		this->Visible = false;
+		//this->Controls->Clear();
+		//this->Controls->Add(iniUsu);
+
+		iniUsu->Show();
+	}
+	};
 }

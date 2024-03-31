@@ -45,40 +45,21 @@ namespace PetSalut {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::TextBox^ name;
-
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::TextBox^ mail;
-
 	private: System::Windows::Forms::Label^ label4;
-
 	private: System::Windows::Forms::Label^ label5;
-
 	private: System::Windows::Forms::Label^ label6;
-
 	private: System::Windows::Forms::Label^ label7;
-
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::MaskedTextBox^ phone;
-
-
-
-
-
-
 	private: System::Windows::Forms::MaskedTextBox^ date;
-
 	private: System::Windows::Forms::TextBox^ username;
-
 	private: System::Windows::Forms::TextBox^ passwd1;
-
 	private: System::Windows::Forms::TextBox^ passwd2;
-
 	private: System::Windows::Forms::Button^ valid_button;
 	private: System::Windows::Forms::Button^ reg_button;
 	private: System::Windows::Forms::Button^ show1;
-
-
-
 	private: System::Windows::Forms::Button^ show2;
 
 	protected:
@@ -251,6 +232,7 @@ namespace PetSalut {
 			this->passwd1->Name = L"passwd1";
 			this->passwd1->Size = System::Drawing::Size(357, 20);
 			this->passwd1->TabIndex = 23;
+			this->passwd1->UseSystemPasswordChar = true;
 			// 
 			// passwd2
 			// 
@@ -258,6 +240,7 @@ namespace PetSalut {
 			this->passwd2->Name = L"passwd2";
 			this->passwd2->Size = System::Drawing::Size(357, 20);
 			this->passwd2->TabIndex = 24;
+			this->passwd2->UseSystemPasswordChar = true;
 			// 
 			// valid_button
 			// 
