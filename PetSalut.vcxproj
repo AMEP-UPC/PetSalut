@@ -130,10 +130,14 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CercadoraCentre.h" />
     <ClInclude Include="CercadoraMascota.h" />
     <ClInclude Include="CercadoraClinica.h" />
     <ClInclude Include="CercadoraPropietari.h" />
     <ClInclude Include="CercadoraUsuari.h" />
+    <ClInclude Include="ConsultaCentres_forms.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Crea_Mascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -168,6 +172,7 @@
     <ClInclude Include="ModProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PassarellaCentre.h" />
     <ClInclude Include="PassarellaMascota.h" />
     <ClInclude Include="PassarellaUsuari.h" />
     <ClInclude Include="RegUsu.h">
@@ -178,9 +183,12 @@
     <ClInclude Include="PassarellaPropietari.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="TxConsultarCentres.h" />
     <ClInclude Include="TxConsultarMascotes.h" />
     <ClInclude Include="TxConsultaUsu.h" />
+    <ClInclude Include="TxCrearCentre.h" />
     <ClInclude Include="TxCrearMascota.h" />
+    <ClInclude Include="TxEliminaCentre.h" />
     <ClInclude Include="TxEliminaMascota.h" />
     <ClInclude Include="TxEsborraUsu.h" />
     <ClInclude Include="TxIniciSessio.h" />
@@ -190,10 +198,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="CercadoraCentre.cpp" />
     <ClCompile Include="CercadoraMascota.cpp" />
     <ClCompile Include="CercadoraClinica.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
     <ClCompile Include="CercadoraUsuari.cpp" />
+    <ClCompile Include="ConsultaCentres_forms.cpp" />
     <ClCompile Include="ConsultaMascota_forms.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="Crea_Mascota_forms.cpp" />
@@ -206,6 +216,7 @@
     <ClCompile Include="MenuProp.cpp" />
     <ClCompile Include="ModCli.cpp" />
     <ClCompile Include="ModProp.cpp" />
+    <ClCompile Include="PassarellaCentre.cpp" />
     <ClCompile Include="PassarellaClinica.cpp" />
     <ClCompile Include="PassarellaMascota.cpp" />
     <ClCompile Include="PassarellaUsuari.cpp" />
@@ -217,10 +228,13 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TxConsultarCentres.cpp" />
     <ClCompile Include="TxConsultarMascotes.cpp" />
     <ClCompile Include="RegUsu.cpp" />
     <ClCompile Include="TxConsultaUsu.cpp" />
+    <ClCompile Include="TxCrearCentre.cpp" />
     <ClCompile Include="TxCrearMascota.cpp" />
+    <ClCompile Include="TxEliminaCentre.cpp" />
     <ClCompile Include="TxEliminaMascota.cpp" />
     <ClCompile Include="TxEsborraUsu.cpp" />
     <ClCompile Include="TxIniciSessio.cpp" />
@@ -242,6 +256,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ConsultaCentres_forms.resx">
+      <DependentUpon>ConsultaCentres_forms.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaMascota_forms.resx">
       <DependentUpon>ConsultaMascota_forms.h</DependentUpon>
     </EmbeddedResource>

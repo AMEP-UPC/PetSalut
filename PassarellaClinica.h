@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include <vector>
+#include <string>
 using namespace System;
 using namespace std;
 ref class PassarellaClinica
@@ -20,5 +22,6 @@ public:
 		String^ get() { return username; }
 		void set(String^ value) { username = value; }
 	}
+	vector<String^> obtenerCentres();
 };
 

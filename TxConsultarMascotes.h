@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "PassarellaPropietari.h"
+#include <string>
 using namespace System;
 using namespace std;
 

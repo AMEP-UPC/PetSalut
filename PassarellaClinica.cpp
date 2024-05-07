@@ -1,7 +1,9 @@
 ﻿#include "pch.h"
 #include "PassarellaClinica.h"
 #include "DBConnection.h" 
+#include <vector>
 
+using namespace System::Collections::Generic;
 using namespace System;
 using namespace MySql::Data::MySqlClient;
 using namespace System::Windows::Forms; //Per mostrar MessageBox::Show una caixa amb el missatge d'error
@@ -42,4 +44,36 @@ PassarellaClinica::PassarellaClinica(String^ _username) {
 
 PassarellaClinica::PassarellaClinica(const PassarellaClinica^ p) {
 	this->username = p->username;
+}
+
+
+vector<String^> PassarellaClinica::obtenerCentres()
+{
+
+    vector<String^> numeros_ID;
+    MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
+    String^ sql = "SELECT numero_ID FROM centre WHERE clinica = @clinica;";
+    MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+    cmd->Parameters->AddWithValue("@clinica", this->username);
+
+    try {
+        conn->Open();
+        MySqlDataReader^ reader = cmd->ExecuteReader();
+
+        while (reader->Read()) {
+            String^ numero_ID = reader["numero_ID"]->ToString();
+            numeros_ID.push_back(numero_ID);
+        }
+
+        reader->Close();
+    }
+    catch (Exception^ ex) {
+        // Manejar la excepción
+        Console::WriteLine(ex->Message);
+    }
+    finally {
+        conn->Close();
+    }
+
+    return numeros_ID;
 }
