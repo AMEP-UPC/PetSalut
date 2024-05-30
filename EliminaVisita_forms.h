@@ -10,6 +10,7 @@
 #include "CercadoraEsdeveniments.h"
 #include "PassarellaEsdeveniments.h"
 #include "TxEliminaVisita.h"
+#include "TxEliminarValoracio.h"
 #pragma once
 
 namespace PetSalut {
@@ -74,6 +75,11 @@ namespace PetSalut {
 			int indiceParentesisCerrado = visitaSeleccionada->IndexOf(')');
 			String^ idString = visitaSeleccionada->Substring(indiceParentesisAbierto + 1, indiceParentesisCerrado - indiceParentesisAbierto - 1);
 			int id = Int32::Parse(idString);
+			CercadoraVisita^ cercadorav = gcnew CercadoraVisita();
+			PassarellaVisites^ visita = cercadorav->cercaVisita(id);
+			int idcentre = visita->Centre;
+			TxEliminaValoracio^ elimValoracio = TxEliminaValoracio::crear();
+			elimValoracio->ejecutar(idcentre, id);
 			TxEliminaVisita^ elimVisita = TxEliminaVisita::crear();
 			elimVisita->ejecutar(id);
 			this->Close();

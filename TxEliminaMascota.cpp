@@ -12,6 +12,5 @@ TxEliminaMascota^ TxEliminaMascota::crear()
 
 void TxEliminaMascota::ejecutar(int chip)
 {
-;
   PassarellaMascota::eliminar(chip);
 }

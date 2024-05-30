@@ -16,6 +16,7 @@
 #include "PassarellaEsdeveniments.h"
 #include "PassarellaVisites.h"
 #include "TxCrearVisita.h"
+#include "TxCrearValoracio.h"
 
 namespace PetSalut {
 
@@ -185,6 +186,8 @@ namespace PetSalut {
 			int random_num = distrib(gen);
 			TxCrearVisita^ nuevaVisita = TxCrearVisita::crear(this->NomBox->Text->ToString(), random_num,this->DiaBox->Value , this->HoursBox->Text->ToString(), usuari->getUsername(), chipMascota, numeroIDCentro);
 			nuevaVisita->ejecutar();
+			TxCrearValoracio^ novavaloracio = TxCrearValoracio::crear(numeroIDCentro, Convert::ToInt32(this->IDBox->Text), usuari->getUsername(), 0);
+			novavaloracio->ejecutar();
 			this->Close();
 
 		}

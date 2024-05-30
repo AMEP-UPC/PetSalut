@@ -124,7 +124,8 @@ namespace PetSalut {
 
 			Label^ labelTipo = gcnew Label();
 			labelTipo->Text = "Tipo: " + mascota->Tipus;
-			labelTipo->Location = Point(10, labelPropietario->Bottom + 5); // Establece la posición del label debajo del anterior
+			labelTipo->Location = Point(10, labelPropietario->Bottom + 5);
+			labelTipo->AutoSize = true; // Ajusta automáticamente el tamaño del label al texto// Establece la posición del label debajo del anterior
 			descriptionPannel->Controls->Add(labelTipo);
 
 			// Añade más labels con la información que quieras mostrar

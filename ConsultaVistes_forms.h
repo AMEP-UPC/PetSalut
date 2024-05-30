@@ -12,6 +12,7 @@
 #include "CercadoraPropietari.h"
 #include "CreaVisites_forms.h"
 #include "EliminaVisita_forms.h"
+#include "TxModificarValoracio.h"
 
 
 namespace PetSalut {
@@ -58,7 +59,16 @@ namespace PetSalut {
 	private: System::Windows::Forms::Label^ visitaLabel;
 	private: System::Windows::Forms::Panel^ descriptionPannel;
 	private: System::Windows::Forms::Button^ consultar;
+	private: System::Windows::Forms::Button^ valorarButton;
 	private: System::Windows::Forms::ComboBox^ petsList;
+	private: System::Windows::Forms::Panel^ hiddenPanel; // Panel oculto
+	private: System::Windows::Forms::Button^ showHideButton; // Botón para mostrar/ocultar el panel
+	private: System::Windows::Forms::Label^ trackBarLabel;
+	private: System::Windows::Forms::Label^ valorartext;
+	private: System::Windows::Forms::Button^ notaguardarButton;
+
+
+	private: System::Windows::Forms::TrackBar^ trackBar;
 
 	//	private: System::Windows::Forms::Button^ consultar;
 	protected:
@@ -221,14 +231,54 @@ namespace PetSalut {
 			labelUbicacio->AutoSize = true;
 			descriptionPannel->Controls->Add(labelUbicacio);
 
+			    this->valorarButton->Visible = true;
+
 		}
 		else {
 			// Si no hay elementos seleccionados, muestra un mensaje de error
 			MessageBox::Show("Por favor, selecciona un evento antes de consultar.");
 		}
 	}
+	private: System::Void trackBar_Scroll(System::Object^ sender, System::EventArgs^ e) {
+			   // Obtiene el valor actual del TrackBar
+			   int valorSeleccionado = trackBar->Value;
 
+			   // Actualiza el texto de la Label con el valor seleccionado
+			   trackBarLabel->Text = "Nota: " + valorSeleccionado.ToString();
+	}
+		
+	private: System::Void exitbutton_click(System::Object^ sender, System::EventArgs^ e) {
+		this->hiddenPanel->Visible = false;
 
+	}
+	private: System::Void valorarButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->hiddenPanel->Visible = true;
+
+	}
+	private: System::Void notaguardarButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		String^ esdevenimentSeleccionado = visitaList->SelectedItem->ToString();
+
+		// Extrae el numero_id del evento seleccionado (asumiendo que el ID está entre paréntesis)
+		int indiceParentesisAbierto = esdevenimentSeleccionado->IndexOf('(');
+		int indiceParentesisCerrado = esdevenimentSeleccionado->IndexOf(')');
+		String^ idString = esdevenimentSeleccionado->Substring(indiceParentesisAbierto + 1, indiceParentesisCerrado - indiceParentesisAbierto - 1);
+		int numeroid = Int32::Parse(idString);
+		CercadoraVisita^ cercadorav = gcnew CercadoraVisita();
+		PassarellaVisites^ visita = cercadorav->cercaVisita(numeroid);
+		int numeroidcentre = visita->Centre;
+		Ordinador^ ord = Ordinador::getInstance();
+		PassarellaUsuari^ usuari = ord->obteUsuari();
+		TxModificarValoracio^ valoracioModificada = TxModificarValoracio::prepara(numeroidcentre, numeroid, usuari->getUsername(), trackBar->Value);
+		try {
+			valoracioModificada->executa();
+		}
+		catch (Exception^ ex) {
+			throw gcnew Exception("No s'ha pogut modificar l'item");
+
+		}
+		this->hiddenPanel->Visible = false;
+	}
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -251,7 +301,16 @@ namespace PetSalut {
 			this->visitaList = (gcnew System::Windows::Forms::ComboBox());
 			this->visitaLabel = (gcnew System::Windows::Forms::Label());
 			this->descriptionPannel = (gcnew System::Windows::Forms::Panel());
+			this->hiddenPanel = (gcnew System::Windows::Forms::Panel());
+			this->valorartext = (gcnew System::Windows::Forms::Label());
+			this->trackBarLabel = (gcnew System::Windows::Forms::Label());
+			this->showHideButton = (gcnew System::Windows::Forms::Button());
+			this->trackBar = (gcnew System::Windows::Forms::TrackBar());
 			this->consultar = (gcnew System::Windows::Forms::Button());
+			this->valorarButton = (gcnew System::Windows::Forms::Button());
+			this->notaguardarButton = (gcnew System::Windows::Forms::Button());
+			this->hiddenPanel->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// registrarbutton
@@ -363,6 +422,64 @@ namespace PetSalut {
 			this->descriptionPannel->Visible = false;
 			this->descriptionPannel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &ConsultaVistes_forms::descriptionPannel_Paint);
 			// 
+			// hiddenPanel
+			// 
+			this->hiddenPanel->BackColor = System::Drawing::Color::Gray;
+			this->hiddenPanel->Controls->Add(this->notaguardarButton);
+			this->hiddenPanel->Controls->Add(this->valorartext);
+			this->hiddenPanel->Controls->Add(this->trackBarLabel);
+			this->hiddenPanel->Controls->Add(this->showHideButton);
+			this->hiddenPanel->Controls->Add(this->trackBar);
+			this->hiddenPanel->Location = System::Drawing::Point(32, 191);
+			this->hiddenPanel->Name = L"hiddenPanel";
+			this->hiddenPanel->Size = System::Drawing::Size(424, 199);
+			this->hiddenPanel->TabIndex = 21;
+			this->hiddenPanel->Visible = false;
+			// 
+			// valorartext
+			// 
+			this->valorartext->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->valorartext->AutoSize = true;
+			this->valorartext->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->valorartext->Location = System::Drawing::Point(127, 13);
+			this->valorartext->Name = L"valorartext";
+			this->valorartext->Size = System::Drawing::Size(171, 22);
+			this->valorartext->TabIndex = 21;
+			this->valorartext->Text = L"Com valores la visita\?";
+			// 
+			// trackBarLabel
+			// 
+			this->trackBarLabel->AutoSize = true;
+			this->trackBarLabel->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->trackBarLabel->Location = System::Drawing::Point(72, 62);
+			this->trackBarLabel->Name = L"trackBarLabel";
+			this->trackBarLabel->Size = System::Drawing::Size(62, 22);
+			this->trackBarLabel->TabIndex = 0;
+			this->trackBarLabel->Text = L"Nota: 0";
+			// 
+			// showHideButton
+			// 
+			this->showHideButton->BackColor = System::Drawing::Color::Transparent;
+			this->showHideButton->Location = System::Drawing::Point(389, 9);
+			this->showHideButton->Name = L"showHideButton";
+			this->showHideButton->Size = System::Drawing::Size(27, 26);
+			this->showHideButton->TabIndex = 22;
+			this->showHideButton->Text = L"X";
+			this->showHideButton->UseVisualStyleBackColor = false;
+			this->showHideButton->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::exitbutton_click);
+			// 
+			// trackBar
+			// 
+			this->trackBar->Location = System::Drawing::Point(112, 76);
+			this->trackBar->Name = L"trackBar";
+			this->trackBar->Size = System::Drawing::Size(198, 45);
+			this->trackBar->TabIndex = 1;
+			this->trackBar->Scroll += gcnew System::EventHandler(this, &ConsultaVistes_forms::trackBar_Scroll);
+			// 
 			// consultar
 			// 
 			this->consultar->Location = System::Drawing::Point(392, 121);
@@ -374,11 +491,34 @@ namespace PetSalut {
 			this->consultar->UseVisualStyleBackColor = true;
 			this->consultar->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::consultar_Click);
 			// 
+			// valorarButton
+			// 
+			this->valorarButton->Location = System::Drawing::Point(462, 153);
+			this->valorarButton->Name = L"valorarButton";
+			this->valorarButton->Size = System::Drawing::Size(135, 23);
+			this->valorarButton->TabIndex = 20;
+			this->valorarButton->Text = L"VALORAR VISITA";
+			this->valorarButton->UseVisualStyleBackColor = true;
+			this->valorarButton->Visible = false;
+			this->valorarButton->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::valorarButton_Click);
+			// 
+			// notaguardarButton
+			// 
+			this->notaguardarButton->Location = System::Drawing::Point(271, 152);
+			this->notaguardarButton->Name = L"notaguardarButton";
+			this->notaguardarButton->Size = System::Drawing::Size(145, 35);
+			this->notaguardarButton->TabIndex = 22;
+			this->notaguardarButton->Text = L"GUARDAR";
+			this->notaguardarButton->UseVisualStyleBackColor = true;
+			this->notaguardarButton->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::notaguardarButton_Click);
+			// 
 			// ConsultaVistes_forms
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(609, 402);
+			this->ClientSize = System::Drawing::Size(609, 409);
+			this->Controls->Add(this->hiddenPanel);
+			this->Controls->Add(this->valorarButton);
 			this->Controls->Add(this->consultar);
 			this->Controls->Add(this->descriptionPannel);
 			this->Controls->Add(this->visitaLabel);
@@ -391,6 +531,9 @@ namespace PetSalut {
 			this->Controls->Add(this->registrarbutton);
 			this->Name = L"ConsultaVistes_forms";
 			this->Text = L"ConsultaVistes_forms";
+			this->hiddenPanel->ResumeLayout(false);
+			this->hiddenPanel->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

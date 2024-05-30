@@ -135,7 +135,9 @@
     <ClInclude Include="CercadoraMascota.h" />
     <ClInclude Include="CercadoraClinica.h" />
     <ClInclude Include="CercadoraPropietari.h" />
+    <ClInclude Include="CercadoraTipus.h" />
     <ClInclude Include="CercadoraUsuari.h" />
+    <ClInclude Include="CercadoraValoracio.h" />
     <ClInclude Include="CercadoraVisita.h" />
     <ClInclude Include="ConsultaCentresForm.h">
       <FileType>CppForm</FileType>
@@ -189,7 +191,9 @@
     <ClInclude Include="PassarellaCentre.h" />
     <ClInclude Include="PassarellaEsdeveniments.h" />
     <ClInclude Include="PassarellaMascota.h" />
+    <ClInclude Include="PassarellaTipus.h" />
     <ClInclude Include="PassarellaUsuari.h" />
+    <ClInclude Include="PassarellaValoracio.h" />
     <ClInclude Include="PassarellaVisites.h" />
     <ClInclude Include="RegUsu.h">
       <FileType>CppForm</FileType>
@@ -205,13 +209,16 @@
     <ClInclude Include="TxConsultaUsu.h" />
     <ClInclude Include="TxCrearCentre.h" />
     <ClInclude Include="TxCrearMascota.h" />
+    <ClInclude Include="TxCrearValoracio.h" />
     <ClInclude Include="TxCrearVisita.h" />
     <ClInclude Include="TxEliminaCentre.h" />
     <ClInclude Include="TxEliminaMascota.h" />
+    <ClInclude Include="TxEliminarValoracio.h" />
     <ClInclude Include="TxEliminaVisita.h" />
     <ClInclude Include="TxEsborraUsu.h" />
     <ClInclude Include="TxIniciSessio.h" />
     <ClInclude Include="TxModificaCentre.h" />
+    <ClInclude Include="TxModificarValoracio.h" />
     <ClInclude Include="TxModUsu.h" />
     <ClInclude Include="TxRegistraUsu.h" />
     <ClInclude Include="TxTancaSessio.h" />
@@ -223,7 +230,9 @@
     <ClCompile Include="CercadoraMascota.cpp" />
     <ClCompile Include="CercadoraClinica.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
+    <ClCompile Include="CercadoraTipus.cpp" />
     <ClCompile Include="CercadoraUsuari.cpp" />
+    <ClCompile Include="CercadoraValoracio.cpp" />
     <ClCompile Include="CercadoraVisita.cpp" />
     <ClCompile Include="ConsultaCentresForm.cpp" />
     <ClCompile Include="ConsultaMascota_forms.cpp" />
@@ -246,9 +255,11 @@
     <ClCompile Include="PassarellaClinica.cpp" />
     <ClCompile Include="PassarellaEsdeveniments.cpp" />
     <ClCompile Include="PassarellaMascota.cpp" />
+    <ClCompile Include="PassarellaTipus.cpp" />
     <ClCompile Include="PassarellaUsuari.cpp" />
     <ClCompile Include="Ordinador.cpp" />
     <ClCompile Include="PassarellaPropietari.cpp" />
+    <ClCompile Include="PassarellaValoracio.cpp" />
     <ClCompile Include="PassarellaVisites.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -263,13 +274,16 @@
     <ClCompile Include="TxConsultaUsu.cpp" />
     <ClCompile Include="TxCrearCentre.cpp" />
     <ClCompile Include="TxCrearMascota.cpp" />
+    <ClCompile Include="TxCrearValoracio.cpp" />
     <ClCompile Include="TxCrearVisita.cpp" />
     <ClCompile Include="TxEliminaCentre.cpp" />
     <ClCompile Include="TxEliminaMascota.cpp" />
+    <ClCompile Include="TxEliminarValoracio.cpp" />
     <ClCompile Include="TxEliminaVisita.cpp" />
     <ClCompile Include="TxEsborraUsu.cpp" />
     <ClCompile Include="TxIniciSessio.cpp" />
     <ClCompile Include="TxModificaCentre.cpp" />
+    <ClCompile Include="TxModificarValoracio.cpp" />
     <ClCompile Include="TxModUsu.cpp" />
     <ClCompile Include="TxRegistraUsu.cpp" />
     <ClCompile Include="TxTancaSessio.cpp" />

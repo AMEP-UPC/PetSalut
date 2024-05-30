@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include "TxCrearMascota.h"
 #include "Ordinador.h"
+#include "CercadoraTipus.h"
+
 namespace PetSalut {
 
 	using namespace System;
@@ -13,9 +15,11 @@ namespace PetSalut {
 	/// <summary>
 	/// Summary for Form1
 	/// </summary>
+	/// 
 	public ref class Crea_Mascota_forms : public System::Windows::Forms::Form
 	{
 	public:
+
 		Crea_Mascota_forms(void)
 		{
 			InitializeComponent();
@@ -34,6 +38,17 @@ namespace PetSalut {
 			{
 				delete components;
 			}
+		}
+
+		void cargarTiposEnComboBox(System::Windows::Forms::ComboBox^ comboBox) {
+			// Llamar al método para obtener todos los tipos desde la base de datos
+			List<String^>^ tipos = CercadoraTipus::obteTotsTipus();
+
+			// Limpiar el ComboBox antes de agregar los nuevos tipos
+			comboBox->Items->Clear();
+
+			// Agregar los tipos obtenidos al ComboBox
+			comboBox->Items->AddRange(tipos->ToArray());
 		}
 	private: System::Windows::Forms::TextBox^ nameBox;
 	private: System::Windows::Forms::DateTimePicker^ birthdayBox;
@@ -239,6 +254,7 @@ namespace PetSalut {
 			   this->typeBox->Name = L"typeBox";
 			   this->typeBox->Size = System::Drawing::Size(655, 21);
 			   this->typeBox->TabIndex = 6;
+			   cargarTiposEnComboBox(this->typeBox);
 			   // 
 			   // chipLabel
 			   // 
