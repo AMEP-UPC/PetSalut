@@ -137,7 +137,7 @@ namespace PetSalut {
 
 		elimVisita->ShowDialog();
 
-		this->Visible = true;
+		this->Close();
 
 	}
 

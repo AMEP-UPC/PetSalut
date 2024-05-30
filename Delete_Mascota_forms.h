@@ -156,7 +156,7 @@ namespace PetSalut {
 			// 
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Arial", 16, System::Drawing::FontStyle::Bold));
-			this->label8->Location = System::Drawing::Point(176, 37);
+			this->label8->Location = System::Drawing::Point(534, 38);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(110, 26);
 			this->label8->TabIndex = 15;
@@ -167,7 +167,7 @@ namespace PetSalut {
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Arial", 18, System::Drawing::FontStyle::Bold));
-			this->label6->Location = System::Drawing::Point(162, 8);
+			this->label6->Location = System::Drawing::Point(520, 9);
 			this->label6->MaximumSize = System::Drawing::Size(255, 255);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(140, 29);
@@ -189,7 +189,7 @@ namespace PetSalut {
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Location = System::Drawing::Point(117, 119);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(627, 326);
+			this->panel1->Size = System::Drawing::Size(935, 391);
 			this->panel1->TabIndex = 13;
 			// 
 			// panel2
@@ -205,7 +205,7 @@ namespace PetSalut {
 			this->panel2->Controls->Add(this->label3);
 			this->panel2->Location = System::Drawing::Point(3, 73);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(619, 181);
+			this->panel2->Size = System::Drawing::Size(927, 246);
 			this->panel2->TabIndex = 16;
 			this->panel2->Visible = false;
 			// 
@@ -213,7 +213,7 @@ namespace PetSalut {
 			// 
 			this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button4->BackColor = System::Drawing::Color::Transparent;
-			this->button4->Location = System::Drawing::Point(551, 141);
+			this->button4->Location = System::Drawing::Point(859, 206);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(53, 21);
 			this->button4->TabIndex = 13;
@@ -228,7 +228,7 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Arial", 14, System::Drawing::FontStyle::Bold));
-			this->label2->Location = System::Drawing::Point(221, 21);
+			this->label2->Location = System::Drawing::Point(362, 21);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(203, 22);
 			this->label2->TabIndex = 11;
@@ -243,7 +243,7 @@ namespace PetSalut {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(147, 90);
+			this->label3->Location = System::Drawing::Point(291, 87);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(332, 22);
 			this->label3->TabIndex = 3;
@@ -263,7 +263,7 @@ namespace PetSalut {
 			// 
 			this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->button3->BackColor = System::Drawing::Color::Transparent;
-			this->button3->Location = System::Drawing::Point(603, 7);
+			this->button3->Location = System::Drawing::Point(911, 7);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(19, 21);
 			this->button3->TabIndex = 13;
@@ -277,7 +277,7 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Arial", 14, System::Drawing::FontStyle::Bold));
-			this->label7->Location = System::Drawing::Point(225, 34);
+			this->label7->Location = System::Drawing::Point(366, 25);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(203, 22);
 			this->label7->TabIndex = 11;
@@ -294,7 +294,7 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->button1->Location = System::Drawing::Point(358, 140);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(125, 67);
+			this->button1->Size = System::Drawing::Size(433, 132);
 			this->button1->TabIndex = 10;
 			this->button1->Text = L"ELIMINAR";
 			this->button1->UseVisualStyleBackColor = false;
@@ -340,7 +340,7 @@ namespace PetSalut {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(876, 596);
+			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->panel1);

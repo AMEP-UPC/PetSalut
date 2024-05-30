@@ -159,6 +159,9 @@
     <ClInclude Include="EliminaVisita_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Feed.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="PantallaPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -230,6 +233,7 @@
     <ClCompile Include="Crea_Mascota_forms.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="EliminaVisita_forms.cpp" />
+    <ClCompile Include="Feed.cpp" />
     <ClCompile Include="PantallaPrincipal.cpp" />
     <ClCompile Include="InfoCli.cpp" />
     <ClCompile Include="InfoProp.cpp" />
@@ -302,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminaVisita_forms.resx">
       <DependentUpon>EliminaVisita_forms.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feed.resx">
+      <DependentUpon>Feed.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModCli.resx">
       <DependentUpon>ModCli.h</DependentUpon>

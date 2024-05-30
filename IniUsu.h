@@ -71,26 +71,27 @@ namespace PetSalut {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 28.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(540, 149);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(453, 121);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(301, 54);
+			this->label1->Size = System::Drawing::Size(245, 44);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Iniciar Sessió";
 			this->label1->Click += gcnew System::EventHandler(this, &IniUsu::label1_Click);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(552, 289);
+			this->textBox1->Location = System::Drawing::Point(414, 235);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(408, 22);
+			this->textBox1->Size = System::Drawing::Size(307, 20);
 			this->textBox1->TabIndex = 1;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(550, 400);
+			this->textBox2->Location = System::Drawing::Point(412, 325);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(410, 22);
+			this->textBox2->Size = System::Drawing::Size(308, 20);
 			this->textBox2->TabIndex = 2;
 			// 
 			// label2
@@ -98,10 +99,9 @@ namespace PetSalut {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(627, 349);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(494, 281);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(183, 36);
+			this->label2->Size = System::Drawing::Size(147, 29);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Contrasenya";
 			// 
@@ -110,10 +110,9 @@ namespace PetSalut {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(627, 238);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(494, 192);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(190, 36);
+			this->label3->Size = System::Drawing::Size(154, 29);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Nom d\'usuari";
 			// 
@@ -121,9 +120,10 @@ namespace PetSalut {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(640, 463);
+			this->button1->Location = System::Drawing::Point(480, 376);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(234, 75);
+			this->button1->Size = System::Drawing::Size(176, 61);
 			this->button1->TabIndex = 5;
 			this->button1->Text = L"Iniciar Sessió";
 			this->button1->UseVisualStyleBackColor = true;
@@ -131,16 +131,17 @@ namespace PetSalut {
 			// 
 			// IniUsu
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(1579, 814);
+			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"IniUsu";
 			this->Text = L"PETSALUT";
 			this->Load += gcnew System::EventHandler(this, &IniUsu::IniUsu_Load);

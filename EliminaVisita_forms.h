@@ -59,6 +59,7 @@ namespace PetSalut {
 	private: System::Windows::Forms::Button^ eliminabutton;
 	private: System::Windows::Forms::Label^ mascotalabel;
 	private: System::Windows::Forms::ComboBox^ petsList;
+	private: System::Windows::Forms::Label^ Visita;
 
 
 	private: System::Windows::Forms::Label^ questionlabel;
@@ -168,6 +169,7 @@ namespace PetSalut {
 			this->titlelabel = (gcnew System::Windows::Forms::Label());
 			this->eliminabutton = (gcnew System::Windows::Forms::Button());
 			this->questionlabel = (gcnew System::Windows::Forms::Label());
+			this->Visita = (gcnew System::Windows::Forms::Label());
 			this->panelElimina->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -178,6 +180,7 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->panelElimina->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->panelElimina->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panelElimina->Controls->Add(this->Visita);
 			this->panelElimina->Controls->Add(this->mascotalabel);
 			this->panelElimina->Controls->Add(this->petsList);
 			this->panelElimina->Controls->Add(this->visitaList);
@@ -187,7 +190,7 @@ namespace PetSalut {
 			this->panelElimina->Controls->Add(this->questionlabel);
 			this->panelElimina->Location = System::Drawing::Point(78, 100);
 			this->panelElimina->Name = L"panelElimina";
-			this->panelElimina->Size = System::Drawing::Size(666, 314);
+			this->panelElimina->Size = System::Drawing::Size(1028, 460);
 			this->panelElimina->TabIndex = 14;
 			// 
 			// mascotalabel
@@ -198,7 +201,7 @@ namespace PetSalut {
 			this->mascotalabel->AutoSize = true;
 			this->mascotalabel->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->mascotalabel->Location = System::Drawing::Point(102, 139);
+			this->mascotalabel->Location = System::Drawing::Point(342, 147);
 			this->mascotalabel->Name = L"mascotalabel";
 			this->mascotalabel->Size = System::Drawing::Size(75, 22);
 			this->mascotalabel->TabIndex = 16;
@@ -207,17 +210,16 @@ namespace PetSalut {
 			// petsList
 			// 
 			this->petsList->FormattingEnabled = true;
-			this->petsList->Location = System::Drawing::Point(192, 142);
+			this->petsList->Location = System::Drawing::Point(346, 172);
 			this->petsList->Name = L"petsList";
-			this->petsList->Size = System::Drawing::Size(228, 21);
+			this->petsList->Size = System::Drawing::Size(348, 21);
 			this->petsList->TabIndex = 15;
 			this->petsList->Click += gcnew System::EventHandler(this, &EliminaVisita_forms::consultar_Click);
-			
 			// 
 			// visitaList
 			// 
 			this->visitaList->FormattingEnabled = true;
-			this->visitaList->Location = System::Drawing::Point(72, 222);
+			this->visitaList->Location = System::Drawing::Point(346, 264);
 			this->visitaList->Name = L"visitaList";
 			this->visitaList->Size = System::Drawing::Size(348, 21);
 			this->visitaList->TabIndex = 14;
@@ -227,7 +229,7 @@ namespace PetSalut {
 			// 
 			this->exitbutton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->exitbutton->BackColor = System::Drawing::Color::Transparent;
-			this->exitbutton->Location = System::Drawing::Point(642, 7);
+			this->exitbutton->Location = System::Drawing::Point(1004, 7);
 			this->exitbutton->Name = L"exitbutton";
 			this->exitbutton->Size = System::Drawing::Size(19, 21);
 			this->exitbutton->TabIndex = 13;
@@ -241,7 +243,7 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->titlelabel->AutoSize = true;
 			this->titlelabel->Font = (gcnew System::Drawing::Font(L"Arial", 14, System::Drawing::FontStyle::Bold));
-			this->titlelabel->Location = System::Drawing::Point(253, 35);
+			this->titlelabel->Location = System::Drawing::Point(421, 41);
 			this->titlelabel->Name = L"titlelabel";
 			this->titlelabel->Size = System::Drawing::Size(167, 22);
 			this->titlelabel->TabIndex = 11;
@@ -255,9 +257,9 @@ namespace PetSalut {
 			this->eliminabutton->BackColor = System::Drawing::Color::Red;
 			this->eliminabutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->eliminabutton->Location = System::Drawing::Point(448, 204);
+			this->eliminabutton->Location = System::Drawing::Point(828, 344);
 			this->eliminabutton->Name = L"eliminabutton";
-			this->eliminabutton->Size = System::Drawing::Size(164, 55);
+			this->eliminabutton->Size = System::Drawing::Size(146, 61);
 			this->eliminabutton->TabIndex = 10;
 			this->eliminabutton->Text = L"ELIMINAR";
 			this->eliminabutton->UseVisualStyleBackColor = false;
@@ -271,18 +273,33 @@ namespace PetSalut {
 			this->questionlabel->AutoSize = true;
 			this->questionlabel->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->questionlabel->Location = System::Drawing::Point(212, 74);
+			this->questionlabel->Location = System::Drawing::Point(382, 78);
 			this->questionlabel->Name = L"questionlabel";
 			this->questionlabel->Size = System::Drawing::Size(232, 22);
 			this->questionlabel->TabIndex = 3;
 			this->questionlabel->Text = L"Quina Visita vols ELIMINAR\?";
 			this->questionlabel->Click += gcnew System::EventHandler(this, &EliminaVisita_forms::label1_Click);
 			// 
+			// Visita
+			// 
+			this->Visita->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->Visita->AutoSize = true;
+			this->Visita->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Visita->Location = System::Drawing::Point(342, 239);
+			this->Visita->Name = L"Visita";
+			this->Visita->Size = System::Drawing::Size(57, 22);
+			this->Visita->TabIndex = 17;
+			this->Visita->Text = L"Visita:";
+			this->Visita->Click += gcnew System::EventHandler(this, &EliminaVisita_forms::Visita_Click);
+			// 
 			// EliminaVisita_forms
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(822, 515);
+			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->panelElimina);
 			this->Name = L"EliminaVisita_forms";
 			this->Text = L"EliminaVisita_forms";
@@ -295,6 +312,8 @@ namespace PetSalut {
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void visitaList_click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void Visita_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

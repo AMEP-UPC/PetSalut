@@ -120,10 +120,9 @@ namespace PetSalut {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(27, 25);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(20, 20);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(236, 46);
+			this->label1->Size = System::Drawing::Size(189, 37);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Registrar-se";
 			// 
@@ -132,20 +131,18 @@ namespace PetSalut {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(27, 98);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(20, 80);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(204, 36);
+			this->label2->Size = System::Drawing::Size(170, 29);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Nom Complert";
 			// 
 			// name
 			// 
-			this->name->Location = System::Drawing::Point(37, 143);
-			this->name->Margin = System::Windows::Forms::Padding(4);
+			this->name->Location = System::Drawing::Point(28, 116);
 			this->name->MaxLength = 255;
 			this->name->Name = L"name";
-			this->name->Size = System::Drawing::Size(360, 22);
+			this->name->Size = System::Drawing::Size(271, 20);
 			this->name->TabIndex = 3;
 			// 
 			// label3
@@ -153,19 +150,17 @@ namespace PetSalut {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(27, 222);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(20, 180);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(246, 36);
+			this->label3->Size = System::Drawing::Size(200, 29);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Correu Electronic";
 			// 
 			// mail
 			// 
-			this->mail->Location = System::Drawing::Point(37, 266);
-			this->mail->Margin = System::Windows::Forms::Padding(4);
+			this->mail->Location = System::Drawing::Point(28, 216);
 			this->mail->Name = L"mail";
-			this->mail->Size = System::Drawing::Size(360, 22);
+			this->mail->Size = System::Drawing::Size(271, 20);
 			this->mail->TabIndex = 5;
 			this->mail->TextChanged += gcnew System::EventHandler(this, &RegUsu::mail_TextChanged);
 			// 
@@ -174,10 +169,9 @@ namespace PetSalut {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(27, 345);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Location = System::Drawing::Point(20, 280);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(114, 36);
+			this->label4->Size = System::Drawing::Size(96, 29);
 			this->label4->TabIndex = 6;
 			this->label4->Text = L"Telefon";
 			// 
@@ -186,10 +180,9 @@ namespace PetSalut {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(27, 533);
-			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label5->Location = System::Drawing::Point(20, 433);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(224, 36);
+			this->label5->Size = System::Drawing::Size(183, 29);
 			this->label5->TabIndex = 8;
 			this->label5->Text = L"Data Naixement";
 			// 
@@ -198,10 +191,9 @@ namespace PetSalut {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(933, 98);
-			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label6->Location = System::Drawing::Point(700, 80);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(190, 36);
+			this->label6->Size = System::Drawing::Size(154, 29);
 			this->label6->TabIndex = 10;
 			this->label6->Text = L"Nom d\'usuari";
 			// 
@@ -210,10 +202,9 @@ namespace PetSalut {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(933, 222);
-			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label7->Location = System::Drawing::Point(700, 180);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(183, 36);
+			this->label7->Size = System::Drawing::Size(147, 29);
 			this->label7->TabIndex = 12;
 			this->label7->Text = L"Contrasenya";
 			// 
@@ -222,55 +213,49 @@ namespace PetSalut {
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(933, 345);
-			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label8->Location = System::Drawing::Point(700, 280);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(316, 36);
+			this->label8->Size = System::Drawing::Size(253, 29);
 			this->label8->TabIndex = 14;
 			this->label8->Text = L"Verifica la contrasenya";
 			// 
 			// phone
 			// 
-			this->phone->Location = System::Drawing::Point(37, 389);
-			this->phone->Margin = System::Windows::Forms::Padding(4);
+			this->phone->Location = System::Drawing::Point(28, 316);
 			this->phone->Mask = L"+00 000 000 000";
 			this->phone->Name = L"phone";
-			this->phone->Size = System::Drawing::Size(360, 22);
+			this->phone->Size = System::Drawing::Size(271, 20);
 			this->phone->TabIndex = 20;
 			// 
 			// date
 			// 
-			this->date->Location = System::Drawing::Point(37, 577);
-			this->date->Margin = System::Windows::Forms::Padding(4);
+			this->date->Location = System::Drawing::Point(28, 469);
 			this->date->Mask = L"00/00/0000";
 			this->date->Name = L"date";
-			this->date->Size = System::Drawing::Size(360, 22);
+			this->date->Size = System::Drawing::Size(271, 20);
 			this->date->TabIndex = 21;
 			this->date->ValidatingType = System::DateTime::typeid;
 			// 
 			// username
 			// 
-			this->username->Location = System::Drawing::Point(941, 143);
-			this->username->Margin = System::Windows::Forms::Padding(4);
+			this->username->Location = System::Drawing::Point(706, 116);
 			this->username->Name = L"username";
-			this->username->Size = System::Drawing::Size(475, 22);
+			this->username->Size = System::Drawing::Size(357, 20);
 			this->username->TabIndex = 22;
 			// 
 			// passwd1
 			// 
-			this->passwd1->Location = System::Drawing::Point(941, 266);
-			this->passwd1->Margin = System::Windows::Forms::Padding(4);
+			this->passwd1->Location = System::Drawing::Point(706, 216);
 			this->passwd1->Name = L"passwd1";
-			this->passwd1->Size = System::Drawing::Size(475, 22);
+			this->passwd1->Size = System::Drawing::Size(357, 20);
 			this->passwd1->TabIndex = 23;
 			this->passwd1->UseSystemPasswordChar = true;
 			// 
 			// passwd2
 			// 
-			this->passwd2->Location = System::Drawing::Point(941, 389);
-			this->passwd2->Margin = System::Windows::Forms::Padding(4);
+			this->passwd2->Location = System::Drawing::Point(706, 316);
 			this->passwd2->Name = L"passwd2";
-			this->passwd2->Size = System::Drawing::Size(475, 22);
+			this->passwd2->Size = System::Drawing::Size(357, 20);
 			this->passwd2->TabIndex = 24;
 			this->passwd2->UseSystemPasswordChar = true;
 			// 
@@ -280,10 +265,9 @@ namespace PetSalut {
 			this->valid_button->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->valid_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->valid_button->Location = System::Drawing::Point(35, 649);
-			this->valid_button->Margin = System::Windows::Forms::Padding(4);
+			this->valid_button->Location = System::Drawing::Point(26, 527);
 			this->valid_button->Name = L"valid_button";
-			this->valid_button->Size = System::Drawing::Size(364, 80);
+			this->valid_button->Size = System::Drawing::Size(273, 65);
 			this->valid_button->TabIndex = 25;
 			this->valid_button->Text = L"VALIDAR INFORMACIO";
 			this->valid_button->UseVisualStyleBackColor = false;
@@ -295,10 +279,9 @@ namespace PetSalut {
 			this->reg_button->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->reg_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->reg_button->Location = System::Drawing::Point(941, 597);
-			this->reg_button->Margin = System::Windows::Forms::Padding(4);
+			this->reg_button->Location = System::Drawing::Point(706, 485);
 			this->reg_button->Name = L"reg_button";
-			this->reg_button->Size = System::Drawing::Size(476, 80);
+			this->reg_button->Size = System::Drawing::Size(357, 65);
 			this->reg_button->TabIndex = 26;
 			this->reg_button->Text = L"REGISTRAR-SE";
 			this->reg_button->UseVisualStyleBackColor = false;
@@ -311,10 +294,9 @@ namespace PetSalut {
 			this->show1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->show1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->show1->Location = System::Drawing::Point(1425, 266);
-			this->show1->Margin = System::Windows::Forms::Padding(4);
+			this->show1->Location = System::Drawing::Point(1069, 216);
 			this->show1->Name = L"show1";
-			this->show1->Size = System::Drawing::Size(91, 25);
+			this->show1->Size = System::Drawing::Size(68, 20);
 			this->show1->TabIndex = 27;
 			this->show1->Text = L"mostrar";
 			this->show1->UseVisualStyleBackColor = false;
@@ -325,10 +307,9 @@ namespace PetSalut {
 			this->show2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->show2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->show2->Location = System::Drawing::Point(1425, 389);
-			this->show2->Margin = System::Windows::Forms::Padding(4);
+			this->show2->Location = System::Drawing::Point(1069, 316);
 			this->show2->Name = L"show2";
-			this->show2->Size = System::Drawing::Size(91, 25);
+			this->show2->Size = System::Drawing::Size(68, 20);
 			this->show2->TabIndex = 28;
 			this->show2->Text = L"mostrar";
 			this->show2->UseVisualStyleBackColor = false;
@@ -339,10 +320,9 @@ namespace PetSalut {
 			this->PassLong->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->PassLong->ForeColor = System::Drawing::Color::Red;
-			this->PassLong->Location = System::Drawing::Point(899, 624);
-			this->PassLong->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->PassLong->Location = System::Drawing::Point(720, 507);
 			this->PassLong->Name = L"PassLong";
-			this->PassLong->Size = System::Drawing::Size(407, 25);
+			this->PassLong->Size = System::Drawing::Size(331, 20);
 			this->PassLong->TabIndex = 29;
 			this->PassLong->Text = L"La contrasenya ha de tenir 6 caracters o mes!";
 			this->PassLong->Visible = false;
@@ -353,10 +333,9 @@ namespace PetSalut {
 			this->DiffPasswd->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->DiffPasswd->ForeColor = System::Drawing::Color::Red;
-			this->DiffPasswd->Location = System::Drawing::Point(964, 624);
-			this->DiffPasswd->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->DiffPasswd->Location = System::Drawing::Point(730, 507);
 			this->DiffPasswd->Name = L"DiffPasswd";
-			this->DiffPasswd->Size = System::Drawing::Size(302, 25);
+			this->DiffPasswd->Size = System::Drawing::Size(242, 20);
 			this->DiffPasswd->TabIndex = 30;
 			this->DiffPasswd->Text = L"La contrasenyes no coincideixen!";
 			this->DiffPasswd->Visible = false;
@@ -366,19 +345,17 @@ namespace PetSalut {
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(933, 468);
-			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Location = System::Drawing::Point(700, 380);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(155, 36);
+			this->label9->Size = System::Drawing::Size(128, 29);
 			this->label9->TabIndex = 31;
 			this->label9->Text = L"Descripcio";
 			// 
 			// descripcio
 			// 
-			this->descripcio->Location = System::Drawing::Point(941, 512);
-			this->descripcio->Margin = System::Windows::Forms::Padding(4);
+			this->descripcio->Location = System::Drawing::Point(706, 416);
 			this->descripcio->Name = L"descripcio";
-			this->descripcio->Size = System::Drawing::Size(475, 22);
+			this->descripcio->Size = System::Drawing::Size(357, 20);
 			this->descripcio->TabIndex = 32;
 			// 
 			// tipusLabel
@@ -386,10 +363,9 @@ namespace PetSalut {
 			this->tipusLabel->AutoSize = true;
 			this->tipusLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tipusLabel->Location = System::Drawing::Point(27, 442);
-			this->tipusLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->tipusLabel->Location = System::Drawing::Point(20, 359);
 			this->tipusLabel->Name = L"tipusLabel";
-			this->tipusLabel->Size = System::Drawing::Size(207, 36);
+			this->tipusLabel->Size = System::Drawing::Size(167, 29);
 			this->tipusLabel->TabIndex = 33;
 			this->tipusLabel->Text = L"Tipus d\'Usuari";
 			// 
@@ -397,10 +373,9 @@ namespace PetSalut {
 			// 
 			this->radioPropietariButton->AutoSize = true;
 			this->radioPropietariButton->Checked = true;
-			this->radioPropietariButton->Location = System::Drawing::Point(37, 487);
-			this->radioPropietariButton->Margin = System::Windows::Forms::Padding(4);
+			this->radioPropietariButton->Location = System::Drawing::Point(28, 396);
 			this->radioPropietariButton->Name = L"radioPropietariButton";
-			this->radioPropietariButton->Size = System::Drawing::Size(86, 20);
+			this->radioPropietariButton->Size = System::Drawing::Size(69, 17);
 			this->radioPropietariButton->TabIndex = 34;
 			this->radioPropietariButton->TabStop = true;
 			this->radioPropietariButton->Text = L"Propietari";
@@ -409,10 +384,9 @@ namespace PetSalut {
 			// radioClinicaButton
 			// 
 			this->radioClinicaButton->AutoSize = true;
-			this->radioClinicaButton->Location = System::Drawing::Point(188, 487);
-			this->radioClinicaButton->Margin = System::Windows::Forms::Padding(4);
+			this->radioClinicaButton->Location = System::Drawing::Point(141, 396);
 			this->radioClinicaButton->Name = L"radioClinicaButton";
-			this->radioClinicaButton->Size = System::Drawing::Size(68, 20);
+			this->radioClinicaButton->Size = System::Drawing::Size(56, 17);
 			this->radioClinicaButton->TabIndex = 35;
 			this->radioClinicaButton->Text = L"Clinica";
 			this->radioClinicaButton->UseVisualStyleBackColor = true;
@@ -420,10 +394,10 @@ namespace PetSalut {
 			// 
 			// RegUsu
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(1579, 814);
+			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->radioClinicaButton);
 			this->Controls->Add(this->radioPropietariButton);
 			this->Controls->Add(this->tipusLabel);
@@ -450,7 +424,6 @@ namespace PetSalut {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"RegUsu";
 			this->Text = L"RegistrarUsuari";
 			this->Load += gcnew System::EventHandler(this, &RegUsu::RegUsu_Load);

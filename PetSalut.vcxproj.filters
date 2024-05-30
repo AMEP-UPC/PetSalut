@@ -137,6 +137,9 @@
     <ClInclude Include="TxEliminaVisita.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Feed.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -288,6 +291,9 @@
     </ClCompile>
     <ClCompile Include="TxEliminaVisita.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Feed.cpp">
+      <Filter>Forms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
