@@ -3,12 +3,24 @@ name: CI
   push:
     branches:
       - develop
+  pull_request:
+    branches: [ "develop" ]
+env:
+  SOLUTION_FILE_PATH: ./PetSalut.sln
+  BUILD_CONFIGURATION: Debug
+
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4.1.5
-      - name: Setup MSVC environment
-        uses: microsoft/setup-msbuild@v2
-      - name: Build solution
-        run: msbuild /p:Configuration=Release PetSalut.sln
+      - uses: actions/checkout@v4
+      - name: Add MSBuild to PATH
+        uses: microsoft/setup-msbuild@v1.0.2
+
+      - name: Build
+        run: echo "Build command goes here"
+        working-directory: ${{env.GITHUB_WORKSPACE}}
+      - run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
