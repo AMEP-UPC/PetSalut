@@ -64,7 +64,8 @@ namespace PetSalut {
 	private: System::Windows::Forms::ColumnHeader^ Id;
 	private: System::Windows::Forms::ColumnHeader^ Nom;
 	private: System::Windows::Forms::ColumnHeader^ Data;
-	private: System::Windows::Forms::ListBox^ Visites;
+	private: System::Windows::Forms::ListBox^ visitesListBox;
+
 
 
 
@@ -105,7 +106,7 @@ namespace PetSalut {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ConsultaVisitesCentreForms::typeid));
-			this->Visites = (gcnew System::Windows::Forms::ListBox());
+			this->visitesListBox = (gcnew System::Windows::Forms::ListBox());
 			this->visitesListView = (gcnew System::Windows::Forms::ListView());
 			this->Id = (gcnew System::Windows::Forms::ColumnHeader());
 			this->Nom = (gcnew System::Windows::Forms::ColumnHeader());
@@ -117,17 +118,17 @@ namespace PetSalut {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
-			// Visites
+			// visitesListBox
 			// 
-			this->Visites->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->visitesListBox->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Visites->FormattingEnabled = true;
-			this->Visites->ItemHeight = 17;
-			this->Visites->Location = System::Drawing::Point(260, 189);
-			this->Visites->Name = L"Visites";
-			this->Visites->Size = System::Drawing::Size(163, 310);
-			this->Visites->TabIndex = 0;
-			this->Visites->SelectedIndexChanged += gcnew System::EventHandler(this, &ConsultaVisitesCentreForms::visitesListBox_SelectedIndexChanged);
+			this->visitesListBox->FormattingEnabled = true;
+			this->visitesListBox->ItemHeight = 17;
+			this->visitesListBox->Location = System::Drawing::Point(260, 189);
+			this->visitesListBox->Name = L"visitesListBox";
+			this->visitesListBox->Size = System::Drawing::Size(163, 310);
+			this->visitesListBox->TabIndex = 0;
+			this->visitesListBox->SelectedIndexChanged += gcnew System::EventHandler(this, &ConsultaVisitesCentreForms::visitesListBox_SelectedIndexChanged);
 			// 
 			// visitesListView
 			// 
@@ -204,7 +205,7 @@ namespace PetSalut {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->tancarButton);
 			this->Controls->Add(this->visitesListView);
-			this->Controls->Add(this->Visites);
+			this->Controls->Add(this->visitesListBox);
 			this->Name = L"ConsultaVisitesCentreForms";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"ConsultaVisitesCentreForms";
