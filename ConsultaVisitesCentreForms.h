@@ -64,9 +64,10 @@ namespace PetSalut {
 	private: System::Windows::Forms::ColumnHeader^ Id;
 	private: System::Windows::Forms::ColumnHeader^ Nom;
 	private: System::Windows::Forms::ColumnHeader^ Data;
+	private: System::Windows::Forms::ListBox^ Visites;
 
 
-	private: System::Windows::Forms::ListBox^ visitesListBox;
+
 	private: System::Windows::Forms::ListView^ visitesListView;
 	private: System::Windows::Forms::Button^ tancarButton;
 
@@ -103,7 +104,8 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->visitesListBox = (gcnew System::Windows::Forms::ListBox());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ConsultaVisitesCentreForms::typeid));
+			this->Visites = (gcnew System::Windows::Forms::ListBox());
 			this->visitesListView = (gcnew System::Windows::Forms::ListView());
 			this->Id = (gcnew System::Windows::Forms::ColumnHeader());
 			this->Nom = (gcnew System::Windows::Forms::ColumnHeader());
@@ -115,14 +117,17 @@ namespace PetSalut {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
-			// visitesListBox
+			// Visites
 			// 
-			this->visitesListBox->FormattingEnabled = true;
-			this->visitesListBox->Location = System::Drawing::Point(260, 189);
-			this->visitesListBox->Name = L"visitesListBox";
-			this->visitesListBox->Size = System::Drawing::Size(163, 290);
-			this->visitesListBox->TabIndex = 0;
-			this->visitesListBox->SelectedIndexChanged += gcnew System::EventHandler(this, &ConsultaVisitesCentreForms::visitesListBox_SelectedIndexChanged);
+			this->Visites->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Visites->FormattingEnabled = true;
+			this->Visites->ItemHeight = 17;
+			this->Visites->Location = System::Drawing::Point(260, 189);
+			this->Visites->Name = L"Visites";
+			this->Visites->Size = System::Drawing::Size(163, 310);
+			this->Visites->TabIndex = 0;
+			this->Visites->SelectedIndexChanged += gcnew System::EventHandler(this, &ConsultaVisitesCentreForms::visitesListBox_SelectedIndexChanged);
 			// 
 			// visitesListView
 			// 
@@ -130,10 +135,12 @@ namespace PetSalut {
 				this->Id, this->Nom,
 					this->Data, this->Hora, this->Propietari, this->Tipus
 			});
+			this->visitesListView->Font = (gcnew System::Drawing::Font(L"Yu Gothic UI", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->visitesListView->HideSelection = false;
 			this->visitesListView->Location = System::Drawing::Point(443, 189);
 			this->visitesListView->Name = L"visitesListView";
-			this->visitesListView->Size = System::Drawing::Size(562, 169);
+			this->visitesListView->Size = System::Drawing::Size(562, 310);
 			this->visitesListView->TabIndex = 1;
 			this->visitesListView->UseCompatibleStateImageBehavior = false;
 			this->visitesListView->View = System::Windows::Forms::View::Details;
@@ -167,33 +174,37 @@ namespace PetSalut {
 			// 
 			// tancarButton
 			// 
-			this->tancarButton->Location = System::Drawing::Point(47, 549);
+			this->tancarButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->tancarButton->Location = System::Drawing::Point(47, 578);
 			this->tancarButton->Name = L"tancarButton";
-			this->tancarButton->Size = System::Drawing::Size(178, 70);
+			this->tancarButton->Size = System::Drawing::Size(179, 41);
 			this->tancarButton->TabIndex = 2;
-			this->tancarButton->Text = L"Tanca";
+			this->tancarButton->Text = L"Torna";
 			this->tancarButton->UseVisualStyleBackColor = true;
 			this->tancarButton->Click += gcnew System::EventHandler(this, &ConsultaVisitesCentreForms::tancarButton_Click);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(453, 82);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(191, 25);
+			this->label1->Size = System::Drawing::Size(292, 42);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Visites als Centres";
 			// 
 			// ConsultaVisitesCentreForms
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->tancarButton);
 			this->Controls->Add(this->visitesListView);
-			this->Controls->Add(this->visitesListBox);
+			this->Controls->Add(this->Visites);
 			this->Name = L"ConsultaVisitesCentreForms";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"ConsultaVisitesCentreForms";
